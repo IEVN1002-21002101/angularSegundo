@@ -6,7 +6,11 @@ export const routes: Routes = [
         loadChildren: () => import('./auth/features/auth.routes')
     },
     {
-        path: '*',
-        redirectTo: ''
+        path: 'zodiacos',
+        loadChildren: () => import('./formulario/zoodiaco/zod.routes')
+    },
+    {
+        path: '**',  // Cambiado '*' por '**'
+        redirectTo: '' // O mejor, '/'
     },
 ];
